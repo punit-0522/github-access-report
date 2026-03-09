@@ -7,7 +7,7 @@ public class GithubAccessReport {
 
     public static void main(String[] args) throws IOException {
 
-        String token = "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";
+        String token = System.getenv("GITHUB_TOKEN");
         String repositoryName = "punit-0522/github-access-report";
 
         GitHub github = new GitHubBuilder().withOAuthToken(token).build();
